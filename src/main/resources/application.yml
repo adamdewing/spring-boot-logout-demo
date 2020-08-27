@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            client-id: 6kf1am2bo8hmje8fvjj24s4vih
+            client-secret: 11c9poicj8ctt7g491233di03k8nmfs1hlri9tqkku6eibmvm441
+            scope: openid
+            redirect-uri: http://localhost:8080/login/oauth2/code/cognito
+            clientName: spring-boot-logout-demo
+        provider:
+          cognito:
+            issuerUri: https://cognito-idp.us-east-2.amazonaws.com/us-east-2_Q3smIoZXg
+            user-name-attribute: cognito:username
